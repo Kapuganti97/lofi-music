@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lo-Fi Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="player">
+    <h1>🎵 Lo-Fi Music Player</h1>
+
+    <img id="album-cover" src="" alt="Album Cover" class="album-cover" />
+
+    <select id="track-list" onchange="selectTrack(this.value)"></select>
+<!-- Inside your .player div, just above <audio> -->
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+
+  <canvas id="visualizer" width="300" height="100"></canvas>
+  
+    <audio id="audio" controls></audio>
+
+    <div class="controls">
+      <button onclick="prevTrack()">⏮️</button>
+      <button onclick="togglePlay()">▶️ / ⏸️</button>
+      <button onclick="nextTrack()">⏭️</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
